@@ -1,0 +1,16 @@
+clc;clear;
+a0 = 0.1;
+b0=5.0;
+c0=1.0;
+ea0=0.026;
+d0=1.0;
+nox=0.17;
+kB = 1.3806e-23;
+q = 1.602e-19;
+Vxg=1;Vxd=1;
+t=3e-6;
+T=1e8;
+Tsimu=273.15 +27;
+AR=a0*(Vxg-0.15)^b0*exp(-c0/(Vxd-0.27))*exp(-ea0*q/(kB*Tsimu));
+dVth=AR*log(1+d0*t^nox);
+dVth_ext=AR*log(1+d0*T^nox);

@@ -1,0 +1,6 @@
+; DEF file for the DLL
+EXPORTS      
+     omiUpdate ;
+     omiCreate ;
+     omiPrintAge ;
+     omiFreeAge ;

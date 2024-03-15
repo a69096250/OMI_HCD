@@ -1,0 +1,16 @@
+# HiSIM2 Parameters 
+
+MODEL OUTPUT
+vfbc -1
+
+MODEL OTHER
+omimod 0
+
+INSTANCE OUTPUT
+
+
+INSTANCE OTHER
+w 5e-6
+
+CORE DATA
+von

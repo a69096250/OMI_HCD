@@ -1,0 +1,17 @@
+# BSIMBULK Parameters 
+
+MODEL OUTPUT
+u0 67.0e-3
+
+MODEL OTHER
+omimod 0
+
+INSTANCE OUTPUT
+
+
+INSTANCE OTHER
+w 1.0e-5
+
+CORE DATA
+gm
+gds

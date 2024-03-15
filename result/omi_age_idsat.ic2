@@ -1,0 +1,19 @@
+* "simulator" "PrimeSim HSPICE"
+* "version" "U-2023.03-SP2-1 linux64"
+* "format" "HSP"
+* "rundate" "16:27:33 03/15/2024 "
+* "netlist" "omi_age_idsat.sp "
+* "runtitle" "***************************"
+* time =  0.000000e+00    
+* temperature =  2.500000e+01    
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc= 1.000000e-12    
+.nodeset
++ b = 0.000000e+00    
++ d0 = 1.000000e+00    
++ d1 =-1.000000e+00    
++ g0 = 1.000000e+00    
++ g1 =-1.000000e+00    
++ s = 0.000000e+00    
+***   END: Saved Operating Point ***                     

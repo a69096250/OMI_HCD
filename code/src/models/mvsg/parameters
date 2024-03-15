@@ -1,0 +1,16 @@
+# MVSG Parameters 
+
+MODEL OUTPUT
+vt0 -2.72
+
+MODEL OTHER
+omimod 0
+
+INSTANCE OUTPUT
+
+
+INSTANCE OTHER
+w 180e-6
+
+CORE DATA
+idisi

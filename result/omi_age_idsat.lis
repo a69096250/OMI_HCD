@@ -1,0 +1,299 @@
+ ****** PrimeSim HSPICE -- U-2023.03-SP2-1 linux64 (Sep 26 2023 8454486) ******
+  Copyright (c) 1986 - 2024 by Synopsys, Inc. All Rights Reserved.
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: omi_age_idsat.sp                                                  
+  Command line options: /data/program/23spice/23spice-sp2/hspice/U-2023.03-SP2-1/hspice/linux64/hspice -i omi_age_idsat.sp -o result/
+  Start time: Fri Mar 15 17:43:12 2024
+ lic:  
+ lic: FLEXlm: SDK_12.11.9.2 
+ lic: USER:   liyu                 HOSTNAME: hostname1 
+ lic: HOSTID: 7f0100               PID:      40130 
+ lic: Using FLEXlm license file: 
+ lic: /data/program/hspice/scl_2016/synopsys.dat 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 27-jun-2025/2022.06 
+ lic: 1(in_use)/10(total) FLOATING license(s) on SERVER /data/program/hspice/scl_2016/synopsys.dat 
+ lic:   
+  **info**  the obsolete option modsrh is ignored
+ Using OMI library code/lib/RH_64/libOMImodel.so
+  **info**  the obsolete option modsrh is ignored
+ 
+  **info**: .option gmin=1e-12 is scaled to gmin=1e-15 for BSIM-CMG.
+  **info**: .option gmindc=1e-12 is scaled to gmindc=1e-15 for BSIM-CMG.
+
+  **warning** (nch_mac:mdut0 (omi_age_idsat.sp:20)) Warning: PHIBE_i = 0.000000e+00 is less than 0.2, setting it to 0.2.
+  
+  **warning**  the following singular supplies have a terminal that is not connected to any other element
+ supply                 node1                  node2
+ vgs1                0:g1               defined in subckt 0            0:0                defined in subckt 0
+ vds1                0:d1               defined in subckt 0            0:0                defined in subckt 0
+  
+      
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000000  
+1****** PrimeSim HSPICE -- U-2023.03-SP2-1 linux64 (Sep 26 2023 8454486) ******
+ ******  
+ ***************************
+
+ ****** operating point information tnom=  25.000 temp=  27.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+    node    =voltage         node    =voltage         node    =voltage
+
+ +0:b       = 0.000000e+00 0:d0      = 1.000000e+00 0:d1      =-1.000000e+00
+ +0:g0      = 1.000000e+00 0:g1      =-1.000000e+00 0:s       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                                                          
+ element     0:vbs         0:vds0        0:vds1        0:vgs0    
+  volts    0.000000e+00  1.000000e+00 -1.000000e+00  1.000000e+00
+  current  0.000000e+00 -6.078110e-06  0.000000e+00  0.000000e+00
+  power    0.000000e+00  6.078110e-06  0.000000e+00  0.000000e+00
+
+ subckt                              
+ element     0:vgs1        0:vss     
+  volts   -1.000000e+00  0.000000e+00
+  current  0.000000e+00  6.078110e-06
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  6.078110e-06    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:mdut0   
+ model       0:nch_mac 
+ region   Saturation   
+  id       6.078110e-06
+  ibs      0.000000e+00
+  ibd      0.000000e+00
+  vgs      1.000000e+00
+  vds      1.000000e+00
+  vbs      0.000000e+00
+  vth      5.163322e-01
+  vdsat    4.197234e-01
+  vod      4.836678e-01
+  beta     7.769560e-05
+  gam eff -1.234568e-29
+  gm       2.099251e-05
+  gds      2.041365e-07
+  gmb      0.000000e+00
+  cdtot    2.373766e-17
+  cgtot    1.532523e-15
+  cstot    9.184915e-16
+  cbtot    0.000000e+00
+  cgs      1.504980e-15
+  cgd      2.754356e-17
+
+
+
+ step=0.000000e+00,time=0.000000e+00
+ step=2.500000e-07,time=0.000000e+00
+ dVth = 3.001927e-04, teff = 0.000000e+00,tdeg=2.500000e-07
+ step=2.500000e-07,time=2.500000e-07
+ dVth = 3.362436e-04, teff = 2.500000e-07,tdeg=5.000000e-07
+ step=8.000000e-07,time=5.000000e-07
+ dVth = 3.928073e-04, teff = 5.000000e-07,tdeg=1.300000e-06
+ step=1.500000e-06,time=1.300000e-06
+ dVth = 4.446829e-04, teff = 1.300000e-06,tdeg=2.800000e-06
+ step=2.000000e-07,time=2.800000e-06
+ dVth = 4.496534e-04, teff = 2.800000e-06,tdeg=3.000000e-06
+
+          ***** job concluded
+ ******  
+ ***************************
+
+ ****** job statistics summary tnom=  25.000 temp=  27.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) Silver 4214 CPU @ 2.20GHz
+ cpu MHz	: 2586.450
+ CPU(s)		: 48
+  
+ OS:
+ Linux version 3.10.0-1160.el7.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) ) #1 SMP Mon Oct 19 16:18:59 UTC 2020
+
+ System loadavg : 2.88 1.74 1.55 3/12077 40133
+
+
+  ******  PrimeSim HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :    48
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =       7 # elements   =       7
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       6
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       1 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           2
+  transient          0.00           4          10           5 rev=         0
+  readin             0.00
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        485.68 megabytes
+           total cpu time            0.01 seconds
+           total elapsed time        0.04 seconds
+           job started at     17:43:12 03/15/2024
+           job ended   at     17:43:12 03/15/2024
+  **info**  the obsolete option modsrh is ignored
+  **info**  the obsolete option modsrh is ignored
+ dagetime = 1.000000e+08
+ dVth_ext=1.310029e-02,AR=4.127060e-03, part2=3.174241e+00
+ 1=4.496534e-04,2=1.089525e-01,3=3.000000e-06
+ dVth_ext=1.310029e-02
+ dagetime = 1.000000e+08
+ dVth_ext=1.310029e-02
+ dagetime = 1.000000e+08
+ dVth_ext=1.310029e-02
+  
+  **warning**  the following singular supplies have a terminal that is not connected to any other element
+ supply                 node1                  node2
+ vgs1                0:g1               defined in subckt 0            0:0                defined in subckt 0
+ vds1                0:d1               defined in subckt 0            0:0                defined in subckt 0
+  
+      
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000000  
+ dagetime = 1.000000e+08
+ dVth_ext=1.310029e-02
+ ******  
+ ***************************
+
+ ****** operating point information tnom=  25.000 temp=  27.000 ******
+ ****** operating point status is all       simulation time is   0.000000e+00
+    node    =voltage         node    =voltage         node    =voltage
+
+ +0:b       = 0.000000e+00 0:d0      = 1.000000e+00 0:d1      =-1.000000e+00
+ +0:g0      = 1.000000e+00 0:g1      =-1.000000e+00 0:s       = 0.000000e+00
+
+
+ **** voltage sources
+
+ subckt                                                          
+ element     0:vbs         0:vds0        0:vds1        0:vgs0    
+  volts    0.000000e+00  1.000000e+00 -1.000000e+00  1.000000e+00
+  current  0.000000e+00 -5.804276e-06  0.000000e+00  0.000000e+00
+  power    0.000000e+00  5.804276e-06  0.000000e+00  0.000000e+00
+
+ subckt                              
+ element     0:vgs1        0:vss     
+  volts   -1.000000e+00  0.000000e+00
+  current  0.000000e+00  5.804276e-06
+  power    0.000000e+00  0.000000e+00
+
+     total voltage source power dissipation=  5.804276e-06    watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                
+ element     0:mdut0   
+ model       0:nch_mac 
+ region   Saturation   
+  id       5.804276e-06
+  ibs      0.000000e+00
+  ibd      0.000000e+00
+  vgs      1.000000e+00
+  vds      1.000000e+00
+  vbs      0.000000e+00
+  vth      5.294325e-01
+  vdsat    4.087264e-01
+  vod      4.705675e-01
+  beta     7.769560e-05
+  gam eff -1.234568e-29
+  gm       2.080758e-05
+  gds      1.848639e-07
+  gmb      0.000000e+00
+  cdtot    2.298045e-17
+  cgtot    1.525954e-15
+  cstot    9.151448e-16
+  cbtot    0.000000e+00
+  cgs      1.499425e-15
+  cgd      2.652895e-17
+
+
+
+ step=0.000000e+00,time=3.000000e-06
+ step=2.500000e-07,time=0.000000e+00
+ dVth = 3.001927e-04, teff = 0.000000e+00,tdeg=2.500000e-07
+ step=2.500000e-07,time=2.500000e-07
+ dVth = 3.362436e-04, teff = 2.500000e-07,tdeg=5.000000e-07
+ step=8.000000e-07,time=5.000000e-07
+ dVth = 3.928073e-04, teff = 5.000000e-07,tdeg=1.300000e-06
+ step=1.500000e-06,time=1.300000e-06
+ dVth = 4.446829e-04, teff = 1.300000e-06,tdeg=2.800000e-06
+ step=2.000000e-07,time=2.800000e-06
+ dVth = 4.496534e-04, teff = 2.800000e-06,tdeg=3.000000e-06
+
+          ***** job concluded
+ ******  
+ ***************************
+
+ ****** job statistics summary tnom=  25.000 temp=  27.000 ******
+
+  ******  Circuit Statistics  ******
+  # nodes       =       7 # elements   =       7
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       6
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       1 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           2
+  transient          0.00           4          10           5 rev=         0
+  readin             0.00
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        485.81 megabytes
+           total cpu time            0.00 seconds
+           total elapsed time        0.00 seconds
+           job started at     17:43:12 03/15/2024
+           job ended   at     17:43:12 03/15/2024
+           job total runtime         0.05 seconds
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.03(s)

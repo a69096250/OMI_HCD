@@ -1,0 +1,16 @@
+# ASM Parameters 
+
+MODEL OUTPUT
+voff -2.0
+
+MODEL OTHER
+omimod 0
+
+INSTANCE OUTPUT
+
+
+INSTANCE OTHER
+w 200e-6
+
+CORE DATA
+

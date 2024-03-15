@@ -1,0 +1,16 @@
+# LUTSOI Parameters 
+
+MODEL OUTPUT
+vfb 0
+
+MODEL OTHER
+omimod 0
+
+INSTANCE OUTPUT
+
+
+INSTANCE OTHER
+w 1e-6
+
+CORE DATA
+id

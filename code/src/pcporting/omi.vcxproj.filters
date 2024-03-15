@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{af2cf6cd-8b37-48cf-8ba7-96fb38576f5e}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\models">
+      <UniqueIdentifier>{f519e065-5acf-453a-ba16-afe549d36f9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\models\bsim4">
+      <UniqueIdentifier>{013832ac-8068-4b84-a497-67f1c36e11ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\models\bsimcmg">
+      <UniqueIdentifier>{73f14128-6b0e-47fe-b522-44f08452fb83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\models\hisim2">
+      <UniqueIdentifier>{ff04d01a-fc43-4ed5-8572-3b3e6567f270}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\models\bsimsoi">
+      <UniqueIdentifier>{bc62cd48-8ba5-4010-a5f8-4e6207cbdcd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\models\common">
+      <UniqueIdentifier>{6a6fe7b9-2049-4a62-95d4-9fc5b7069e25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\simif">
+      <UniqueIdentifier>{c20f9854-f562-4d82-ae59-51c3ad2b5288}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ut">
+      <UniqueIdentifier>{5c409db5-0c41-4dc9-adb2-1b534426e920}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{48beb72e-8df4-4522-8d73-91cdcc22cc26}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{2f490b93-79fa-4e47-b9e0-08c305636ed3}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\models\bsim4\omiBSIM4.c">
+      <Filter>Source Files\models\bsim4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsim4\omiBSIM4BuildParam.c">
+      <Filter>Source Files\models\bsim4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsim4\omiBSIM4Eval.c">
+      <Filter>Source Files\models\bsim4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsim4\omiBSIM4GetInstParam.c">
+      <Filter>Source Files\models\bsim4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsim4\omiBSIM4GetModelParam.c">
+      <Filter>Source Files\models\bsim4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsim4\omiBSIM4Ift.c">
+      <Filter>Source Files\models\bsim4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsim4\omiBSIM4InitInstParam.c">
+      <Filter>Source Files\models\bsim4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsim4\omiBSIM4InitModelParam.c">
+      <Filter>Source Files\models\bsim4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsim4\omiBSIM4Set.c">
+      <Filter>Source Files\models\bsim4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsim4\omiBSIM4SetInstParam.c">
+      <Filter>Source Files\models\bsim4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsim4\omiBSIM4SetModelParam.c">
+      <Filter>Source Files\models\bsim4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsim4\omiBSIM4Temp.c">
+      <Filter>Source Files\models\bsim4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMG.c">
+      <Filter>Source Files\models\bsimcmg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGBuildParam.c">
+      <Filter>Source Files\models\bsimcmg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGEval.c">
+      <Filter>Source Files\models\bsimcmg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGGetInstParam.c">
+      <Filter>Source Files\models\bsimcmg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGGetModelParam.c">
+      <Filter>Source Files\models\bsimcmg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGIft.c">
+      <Filter>Source Files\models\bsimcmg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGInitInstParam.c">
+      <Filter>Source Files\models\bsimcmg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGInitModelParam.c">
+      <Filter>Source Files\models\bsimcmg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGSet.c">
+      <Filter>Source Files\models\bsimcmg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGSetInstParam.c">
+      <Filter>Source Files\models\bsimcmg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGSetModelParam.c">
+      <Filter>Source Files\models\bsimcmg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGTemp.c">
+      <Filter>Source Files\models\bsimcmg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\hisim2\omiHiSIM2.c">
+      <Filter>Source Files\models\hisim2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\hisim2\omiHiSIM2BuildParam.c">
+      <Filter>Source Files\models\hisim2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\hisim2\omiHiSIM2Eval.c">
+      <Filter>Source Files\models\hisim2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\hisim2\omiHiSIM2GetInstParam.c">
+      <Filter>Source Files\models\hisim2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\hisim2\omiHiSIM2GetModelParam.c">
+      <Filter>Source Files\models\hisim2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\hisim2\omiHiSIM2Ift.c">
+      <Filter>Source Files\models\hisim2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\hisim2\omiHiSIM2InitInstParam.c">
+      <Filter>Source Files\models\hisim2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\hisim2\omiHiSIM2InitModelParam.c">
+      <Filter>Source Files\models\hisim2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\hisim2\omiHiSIM2Set.c">
+      <Filter>Source Files\models\hisim2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\hisim2\omiHiSIM2SetInstParam.c">
+      <Filter>Source Files\models\hisim2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\hisim2\omiHiSIM2SetModelParam.c">
+      <Filter>Source Files\models\hisim2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\hisim2\omiHiSIM2Temp.c">
+      <Filter>Source Files\models\hisim2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOI.c">
+      <Filter>Source Files\models\bsimsoi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOIBuildParam.c">
+      <Filter>Source Files\models\bsimsoi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOIEval.c">
+      <Filter>Source Files\models\bsimsoi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOIGetInstParam.c">
+      <Filter>Source Files\models\bsimsoi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOIGetModelParam.c">
+      <Filter>Source Files\models\bsimsoi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOIIft.c">
+      <Filter>Source Files\models\bsimsoi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOIInitInstParam.c">
+      <Filter>Source Files\models\bsimsoi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOIInitModelParam.c">
+      <Filter>Source Files\models\bsimsoi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOISet.c">
+      <Filter>Source Files\models\bsimsoi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOISetInstParam.c">
+      <Filter>Source Files\models\bsimsoi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOISetModelParam.c">
+      <Filter>Source Files\models\bsimsoi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOITemp.c">
+      <Filter>Source Files\models\bsimsoi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\simif\omiIft.c">
+      <Filter>Source Files\simif</Filter>
+    </ClCompile>
+    <ClCompile Include="..\simif\omiMain.c">
+      <Filter>Source Files\simif</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ut\omiBinTree.c">
+      <Filter>Source Files\ut</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ut\omiHash.c">
+      <Filter>Source Files\ut</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\models\bsim4\omiBSIM4Def.h">
+      <Filter>Source Files\models\bsim4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\models\bsim4\omiBSIM4Ift.h">
+      <Filter>Source Files\models\bsim4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\models\bsimcmg\omiBSIMCMGDef.h">
+      <Filter>Source Files\models\bsimcmg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\models\bsimcmg\omiBSIMCMGIft.h">
+      <Filter>Source Files\models\bsimcmg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\models\hisim2\omiHiSIM2Def.h">
+      <Filter>Source Files\models\hisim2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\models\hisim2\omiHiSIM2Ift.h">
+      <Filter>Source Files\models\hisim2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\models\bsimsoi\omiBSIMSOIDef.h">
+      <Filter>Source Files\models\bsimsoi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\models\bsimsoi\omiBSIMSOIIft.h">
+      <Filter>Source Files\models\bsimsoi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\models\common\omiAge.h">
+      <Filter>Source Files\models\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ut\omiBinTree.h">
+      <Filter>Source Files\ut</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ut\omiHash.h">
+      <Filter>Source Files\ut</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\omiDef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\omiIft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

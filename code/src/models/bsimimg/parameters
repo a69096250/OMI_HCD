@@ -1,0 +1,16 @@
+# BSIMIMG Parameters 
+
+MODEL OUTPUT
+u0 3e-2
+
+MODEL OTHER
+omimod 0
+
+INSTANCE OUTPUT
+
+
+INSTANCE OTHER
+w 1e-6
+
+CORE DATA
+gds

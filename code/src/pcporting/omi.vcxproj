@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{5931741F-95E9-4C13-B2C4-DD0222B4050D}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.33516.290</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\..\..\obj\WIN_dbg\</OutDir>
+    <IntDir>.\..\..\obj\WIN_dbg\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\..\..\obj\WIN\</OutDir>
+    <IntDir>.\..\..\obj\WIN\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\obj\WIN_dbg/omi.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\include;..\ut;..\models\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;__STDC__;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\..\..\obj\WIN_dbg/omi.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\..\..\obj\WIN_dbg/</AssemblerListingLocation>
+      <ObjectFileName>.\..\..\obj\WIN_dbg/</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\..\obj\WIN_dbg/</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>..\..\lib\WIN\libOMImodel.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\omi.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\..\..\obj\WIN_dbg/libOMImodel.pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>..\..\lib\WIN_dbg\libOMImodel.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\obj\WIN_dbg/omi.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\obj\WIN/omi.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\include;..\ut;..\models\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;__STDC__;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>.\..\..\obj\WIN/omi.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\..\..\obj\WIN/</AssemblerListingLocation>
+      <ObjectFileName>.\..\..\obj\WIN/</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\..\obj\WIN/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>..\..\lib\WIN\libOMImodel.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\omi.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>.\..\..\obj\WIN/libOMImodel.pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>..\..\lib\WIN\libOMImodel.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\obj\WIN/omi.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\models\bsim4\omiBSIM4.c" />
+    <ClCompile Include="..\models\bsim4\omiBSIM4BuildParam.c" />
+    <ClCompile Include="..\models\bsim4\omiBSIM4Eval.c" />
+    <ClCompile Include="..\models\bsim4\omiBSIM4GetInstParam.c" />
+    <ClCompile Include="..\models\bsim4\omiBSIM4GetModelParam.c" />
+    <ClCompile Include="..\models\bsim4\omiBSIM4Ift.c" />
+    <ClCompile Include="..\models\bsim4\omiBSIM4InitInstParam.c" />
+    <ClCompile Include="..\models\bsim4\omiBSIM4InitModelParam.c" />
+    <ClCompile Include="..\models\bsim4\omiBSIM4Set.c" />
+    <ClCompile Include="..\models\bsim4\omiBSIM4SetInstParam.c" />
+    <ClCompile Include="..\models\bsim4\omiBSIM4SetModelParam.c" />
+    <ClCompile Include="..\models\bsim4\omiBSIM4Temp.c" />
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMG.c" />
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGBuildParam.c" />
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGEval.c" />
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGGetInstParam.c" />
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGGetModelParam.c" />
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGIft.c" />
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGInitInstParam.c" />
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGInitModelParam.c" />
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGSet.c" />
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGSetInstParam.c" />
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGSetModelParam.c" />
+    <ClCompile Include="..\models\bsimcmg\omiBSIMCMGTemp.c" />
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOI.c" />
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOIBuildParam.c" />
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOIEval.c" />
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOIGetInstParam.c" />
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOIGetModelParam.c" />
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOIIft.c" />
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOIInitInstParam.c" />
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOIInitModelParam.c" />
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOISet.c" />
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOISetInstParam.c" />
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOISetModelParam.c" />
+    <ClCompile Include="..\models\bsimsoi\omiBSIMSOITemp.c" />
+    <ClCompile Include="..\models\hisim2\omiHiSIM2.c" />
+    <ClCompile Include="..\models\hisim2\omiHiSIM2BuildParam.c" />
+    <ClCompile Include="..\models\hisim2\omiHiSIM2Eval.c" />
+    <ClCompile Include="..\models\hisim2\omiHiSIM2GetInstParam.c" />
+    <ClCompile Include="..\models\hisim2\omiHiSIM2GetModelParam.c" />
+    <ClCompile Include="..\models\hisim2\omiHiSIM2Ift.c" />
+    <ClCompile Include="..\models\hisim2\omiHiSIM2InitInstParam.c" />
+    <ClCompile Include="..\models\hisim2\omiHiSIM2InitModelParam.c" />
+    <ClCompile Include="..\models\hisim2\omiHiSIM2Set.c" />
+    <ClCompile Include="..\models\hisim2\omiHiSIM2SetInstParam.c" />
+    <ClCompile Include="..\models\hisim2\omiHiSIM2SetModelParam.c" />
+    <ClCompile Include="..\models\hisim2\omiHiSIM2Temp.c" />
+    <ClCompile Include="..\simif\omiIft.c" />
+    <ClCompile Include="..\simif\omiMain.c" />
+    <ClCompile Include="..\ut\omiBinTree.c" />
+    <ClCompile Include="..\ut\omiHash.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\omiDef.h" />
+    <ClInclude Include="..\..\include\omiIft.h" />
+    <ClInclude Include="..\models\bsim4\omiBSIM4Def.h" />
+    <ClInclude Include="..\models\bsim4\omiBSIM4Ift.h" />
+    <ClInclude Include="..\models\bsimcmg\omiBSIMCMGDef.h" />
+    <ClInclude Include="..\models\bsimcmg\omiBSIMCMGIft.h" />
+    <ClInclude Include="..\models\bsimsoi\omiBSIMSOIDef.h" />
+    <ClInclude Include="..\models\bsimsoi\omiBSIMSOIIft.h" />
+    <ClInclude Include="..\models\common\omiAge.h" />
+    <ClInclude Include="..\models\hisim2\omiHiSIM2Def.h" />
+    <ClInclude Include="..\models\hisim2\omiHiSIM2Ift.h" />
+    <ClInclude Include="..\ut\omiBinTree.h" />
+    <ClInclude Include="..\ut\omiHash.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

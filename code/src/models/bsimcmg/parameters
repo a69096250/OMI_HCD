@@ -1,0 +1,44 @@
+# BSIMCMG Parameters 
+
+MODEL OUTPUT
+u0 3e-2
+dvtshift 0.0
+
+MODEL OTHER
+omimod 0
+a0 0.0
+b0 0.0
+c0 0.0
+Ea0 0.0
+d0 0.0
+nox 0.15
+Tsimu 0.0
+dagetime 0.0
+INSTANCE OUTPUT
+
+
+INSTANCE OTHER
+nfin 1
+
+CORE DATA
+# These parameters were part of OMI 1.0.0
+# For backward compatibility, leave the following list unchanged.
+ids
+igidl
+igisl
+igs
+igd
+igcs
+igcd
+igbs
+igbd
+iii
+qg
+qd
+qs
+qb
+rsgeo
+rdgeo
+cfgeo
+gm
+gds

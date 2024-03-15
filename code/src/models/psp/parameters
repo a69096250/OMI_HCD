@@ -1,0 +1,17 @@
+# PSP Parameters 
+
+MODEL OUTPUT
+vfbo -1.0
+
+MODEL OTHER
+omimod 0
+
+INSTANCE OUTPUT
+
+
+INSTANCE OTHER
+w 1e-5
+
+CORE DATA
+vth
+

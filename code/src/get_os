@@ -1,0 +1,160 @@
+#!/bin/csh  -f
+
+# ****************************************************************************
+# *  Copyright (c) 2010 Taiwan Semiconductor Manufacturing Company, Ltd.
+# *  Copyright (c) 2017-2021 Silicon Integration Initiative, Inc.
+# *  See the file Si2_OMI_Licensed_Package_Statement_v1.0.txt
+# *  included with this distribution for usage terms and conditions.
+# ****************************************************************************
+
+# *  File        : get_os
+# *  Date        : 2016-11-22
+# *  Description : Used to get current Unix OS for make
+
+#options for get_os:
+#
+#   -t      time command
+#   -l      used for omi
+
+
+set stime       = "/bin/time"
+set omi_arch    = unknown
+
+
+# print the operating system name
+if ( -x /bin/uname ) then
+   set uplat = (`/bin/uname -s`)
+else if ( -x /usr/bin/uname ) then
+   set uplat = (`/usr/bin/uname -s`)
+endif
+
+switch ($uplat)
+    case SunOS:                 
+        if ( -x /bin/uname ) then
+            set sol4osversion = `/bin/uname -r`
+            set solarch = `/bin/uname -p`
+        else
+            set sol4osversion = `/usr/bin/uname -r`
+            set solarch = `/usr/bin/uname -p`
+        endif
+        switch ( $sol4osversion )
+        case 5.5*:
+                set omi_arch = sunos55
+                breaksw
+        case 5.6*:
+                set omi_arch = sunos56
+                breaksw
+        case 5.7*:
+                set omi_arch = sunos57
+                breaksw
+        case 5.8*:
+                set omi_arch = SUN
+                breaksw
+        case 5.9*:
+                set omi_arch = SUN
+                breaksw
+        case 5.10*:
+	        if( $solarch == "i386" ) then
+		  set omi_arch=X86SUN
+		else
+                  set omi_arch = SUN
+		endif
+                breaksw
+        default:
+                set omi_arch = SUN
+                breaksw
+        endsw
+        breaksw
+
+    case Linux*:
+        set stime = "/usr/bin/time -p"
+        if ( -f /etc/SuSE-release ) then
+           set omi_arch = SUSE
+        else
+           # print the kernel release
+           if ( -x /bin/uname ) then
+               set lnxosversion = `/bin/uname -r`
+           else
+               set lnxosversion = `/usr/bin/uname -r`
+           endif
+           switch ( $lnxosversion )
+           case 2.2.16-22*:
+                   set omi_arch = RH
+                   breaksw
+           case 2.4.2-2*:
+                   set omi_arch = RH
+                   breaksw
+           case 2.4.7-10*:
+                   set omi_arch = RH
+                   breaksw
+           case 2.4.21-*:
+                   set omi_arch = RH
+                   breaksw
+           case 2.6.9-*:
+                   set omi_arch = RH
+                   breaksw
+           case 2.6.18-*:
+                   set omi_arch = RH
+                   breaksw
+           default:
+                   set omi_arch = RH
+                   breaksw
+           endsw
+        endif
+	breaksw
+
+    case AIX:                    
+        if ( -x /bin/uname ) then
+            set rsosversion = `/bin/uname -r`
+        else
+            set rsosversion = `/usr/bin/uname -r`
+        endif
+	switch ( $rsosversion )
+	case 1:
+                set omi_arch = rs51
+		breaksw
+	default:
+                set omi_arch = rs51
+		breaksw
+	endsw
+	set stime = "/usr/bin/timex"
+    	breaksw
+
+    case HP-UX:
+        switch ( `uname -r` )
+        case B.10*:
+             set omi_arch = pa10
+             breaksw
+        case B.11*:
+             set omi_arch = hp32
+             breaksw
+        endsw
+        breaksw
+
+    case OSF*:                   
+        set omi_arch = decalpha
+	breaksw
+
+    default:
+        set omi_arch = unknown
+        breaksw
+endsw # uplat
+
+
+if ( $#argv != 0 ) then
+    set retval = "BLANK"
+    while ($#argv)
+        switch ($argv[1])
+            case "-t*":
+                set retval = ($retval $stime)
+                breaksw
+            case "-l*":
+                set retval = ($retval $omi_arch)
+                breaksw
+        endsw
+        shift argv
+    end
+    shift retval
+endif 
+
+echo $retval

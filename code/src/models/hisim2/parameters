@@ -1,0 +1,50 @@
+# HiSIM2 Parameters 
+
+MODEL OUTPUT
+vfbc -1
+
+MODEL OTHER
+omimod 0
+
+INSTANCE OUTPUT
+
+
+INSTANCE OTHER
+w 5e-6
+
+CORE DATA
+# These parameters were part of OMI 1.0.0
+# For backward compatibility, leave the following list unchanged.
+ids
+isub
+igidl
+igisl
+igd
+igs
+igb
+gm
+gds
+gmbs
+von
+vdsat
+qb
+qg
+qd
+cgg
+cgd
+cgs
+cbg
+cbs
+cbd
+cdg
+cdd
+cds
+cgdo
+cgso
+cgbo
+ibd
+ibs
+gbd
+gbs
+capbd
+capbs
