@@ -1,19 +1,29 @@
 name: Docker Transfer
-on: workflow_dispatch # 手动触发
+on: workflow_dispatch
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Pull and Save Docker Image
+      - name: Maximize Agent Disk Space
+        uses: jlumbroso/free-disk-space@main
+        with:
+          # 清理不必要的预装软件，腾出约 50GB 空间
+          tool-cache: true
+          android: true
+          dotnet: true
+          haskell: true
+          large-packages: true
+          docker-images: true
+          swap-storage: true
+
+      - name: Pull and Save Image
         run: |
-          docker pull kenneth850511/llamafactory:v0.9.1
-          # 边导出边用最高比例压缩 (gzip -9)
-          docker save kenneth850511/llamafactory:v0.9.1 | gzip -9 > llamafactory.tar.gz
+          # 使用 skopeo 避免解压过程，最省空间
+          sudo apt-get update && sudo apt-get install -y skopeo
+          skopeo copy docker://kenneth850511/llamafactory:v0.9.1 docker-archive:$(pwd)/llamafactory.tar
           
       - name: Upload to Transfer.sh
         run: |
-          # 这是一个临时大文件传输服务，会返回一个下载链接
-          curl --upload-file ./llamafactory.tar.gz https://transfer.sh/llamafactory.tar.gz > link.txt
-          echo "Download Link: "
-          cat link.txt
+          # 也可以换成使用 scp 传到你服务器
+          curl --upload-file ./llamafactory.tar https://transfer.sh/llamafactory.tar
