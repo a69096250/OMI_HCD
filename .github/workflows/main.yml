@@ -1,4 +1,4 @@
-name: Docker Transfer
+name: Docker TransferV2
 on: workflow_dispatch
 
 jobs:
