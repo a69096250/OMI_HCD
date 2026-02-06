@@ -1,0 +1,19 @@
+name: Docker Transfer
+on: workflow_dispatch # 手动触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull and Save Docker Image
+        run: |
+          docker pull kenneth850511/llamafactory:v0.9.1
+          # 边导出边用最高比例压缩 (gzip -9)
+          docker save kenneth850511/llamafactory:v0.9.1 | gzip -9 > llamafactory.tar.gz
+          
+      - name: Upload to Transfer.sh
+        run: |
+          # 这是一个临时大文件传输服务，会返回一个下载链接
+          curl --upload-file ./llamafactory.tar.gz https://transfer.sh/llamafactory.tar.gz > link.txt
+          echo "Download Link: "
+          cat link.txt
